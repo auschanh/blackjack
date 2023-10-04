@@ -3,7 +3,8 @@ public class Main {
         System.out.println("Welcome to Blackjack");
         Game blackjack = new Game();
         Deck testDeck = new Deck(true);
-        
+        testDeck.shuffle();
         System.out.println(testDeck);
+        
     }
 }

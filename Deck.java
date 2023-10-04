@@ -28,6 +28,23 @@ public class Deck {
         deck.add(card);
     }
 
+    public int getSize() {
+        return deck.size();
+    }
+
+    public void shuffle() {
+        ArrayList<Card> shuffled = new  ArrayList<Card>();
+        while(deck.size()>0) {
+            // use Math.random() to generate a card from 0-51
+            int pulledCard = (int)(Math.random()*(deck.size()));
+            shuffled.add(deck.get(pulledCard)); // add pulledCard to our new shuffled deck
+            deck.remove(pulledCard); // remove the pulledCard from the initialized deck
+
+        }
+        deck = shuffled;
+        
+    }
+
     public String toString(){
         String output = "";
         
