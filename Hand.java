@@ -12,6 +12,10 @@ public class Hand {
     public void drawCard(Deck deck) {
         hand.add(deck.getCard());
     }
+    
+    public Card getCard(int i) {
+        return hand.get(i);
+    }
 
     public int handValue() {
         // get rank of each card in hand and add

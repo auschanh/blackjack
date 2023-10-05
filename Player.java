@@ -3,12 +3,4 @@ public class Player extends Person {
         super.setName("Player");
     }
 
-    public boolean hasBlackJack() {
-        if(this.getHand().handValue() == 21) {
-            return true;
-        } 
-        else {
-            return false;
-        }
-    }
 }

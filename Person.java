@@ -7,6 +7,15 @@ public abstract class Person {
         this.name = "";
         this.hand = new Hand();
     }
+    
+    public boolean hasBlackJack() {
+        if(this.getHand().handValue() == 21) {
+            return true;
+        } 
+        else {
+            return false;
+        }
+    }
 
     public String getName() {
         return this.name;
@@ -22,6 +31,11 @@ public abstract class Person {
 
     public void setHand(Hand hand) {
         this.hand = hand;
+    }
+
+    public void printHand() {
+        System.out.println(name + "'s hand contains this:");
+        System.out.println(hand + " Valued at: " + hand.handValue());
     }
 
     // public void hit(Deck deck, )
