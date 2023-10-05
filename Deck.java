@@ -45,6 +45,12 @@ public class Deck {
         
     }
 
+    public Card getCard(){
+        Card topCard = new Card(deck.get(0)); // takes top card of from deck, uses card as parameter
+        deck.remove(0);
+        return topCard;
+    }
+
     public String toString(){
         String output = "";
         

@@ -8,6 +8,12 @@ public class Card {
         this.rank = rank;
     }
 
+    //  constructor for copy of a card
+    public Card(Card card) {
+        this.suit = card.getSuit();
+        this.rank = card.getRank();
+    }
+
     // getter methods to figure out a card's suit and rank
     public int getValue() {
         return rank.rankValue;
