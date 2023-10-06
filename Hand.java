@@ -40,6 +40,11 @@ public class Hand {
         return value;
     }
 
+    public void discardHand(Deck discardDeck) {
+        discardDeck.addCards(hand); // add cards from hand to discarded deck
+        hand.clear();
+    }
+
     public String toString() {
         String output = "";
         for(Card card : hand) {

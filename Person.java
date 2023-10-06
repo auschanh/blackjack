@@ -34,7 +34,7 @@ public abstract class Person {
     }
 
     public void printHand() {
-        System.out.println(name + "'s hand contains this:");
+        System.out.println(name.toUpperCase() + "'S HAND:");
         System.out.println(hand + " Valued at: " + hand.handValue());
     }
 
@@ -45,7 +45,7 @@ public abstract class Person {
             deck.reloadDeck(discard);
         }
         hand.drawCard(deck);
-        System.out.println(name + " drew a card");
+        System.out.println("🃏 " + name + " drew a card" + " 🃏\n");
         printHand();
     }
 }

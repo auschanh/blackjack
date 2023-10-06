@@ -11,10 +11,11 @@ public class Player extends Person {
         // ask player for: 1 for hit 2 for stand
         int decision = 0;
         boolean getNum = true;
+        String quit = "";
 
         while(getNum) {
             try {
-                System.out.println("PRESS: [1] Hit or [2] Stand");
+                System.out.println("PRESS: [1] Hit or [2] Stand - [3] Quit Game");
                 decision = input.nextInt();
                 getNum = false;
             }
@@ -22,6 +23,10 @@ public class Player extends Person {
                 System.out.println("Invalid input, please press [1] or [2]");
                 input.next();
             }
+        }
+        if(decision == 3) {
+            System.out.println("Thanks for playing Blackjack!");
+            System.exit(0);
         }
         
         if(decision == 1) {
@@ -33,8 +38,8 @@ public class Player extends Person {
                 this.makeDecision(deck, discard);
             }
         } else {
-            System.out.println("You stand.");
-        }
+            System.out.println("You stand.\n");
+        } 
 
     }
 }

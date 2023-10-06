@@ -28,6 +28,6 @@ public class Card {
     }
 
     public String toString() {
-        return ("[" + rank + " of " + suit + "] (" + this.getValue() + ")");
+        return ("[" + suit.suitSymbol + " " + rank + " of " + suit + " " + suit.suitSymbol + "] (" + this.getValue() + ")");
     }
 }
