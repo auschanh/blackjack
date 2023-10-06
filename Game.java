@@ -34,22 +34,23 @@ public class Game {
         if(dealer.hasBlackJack()) {
             dealer.printHand();
             if(player.hasBlackJack()) {
-                System.out.println("You both have a Blackjack (21)! - RESULT: Push/Tie");
+                System.out.println("You both have a Blackjack (21)! - RESULT: Push/Tie\n");
                 pushes++;
                 startRound();
             }
             else {
-                System.out.println("Dealer has Blackjack (21). RESULT: Loss.");
+                System.out.println("Dealer has Blackjack (21). RESULT: Loss.\n");
                 dealer.printHand();
                 losses++;
                 startRound();
             }
         }
         if(player.hasBlackJack()) {
-            System.out.println("You have a Blackjack (21). RESULT: Win.");
+            System.out.println("You have a Blackjack (21). RESULT: Win.\n");
             wins++;
             startRound();
         }
+        player.makeDecision(deck, discarded);
     }
 
 }

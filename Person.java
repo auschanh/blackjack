@@ -7,7 +7,7 @@ public abstract class Person {
         this.name = "";
         this.hand = new Hand();
     }
-    
+
     public boolean hasBlackJack() {
         if(this.getHand().handValue() == 21) {
             return true;
@@ -38,5 +38,14 @@ public abstract class Person {
         System.out.println(hand + " Valued at: " + hand.handValue());
     }
 
-    // public void hit(Deck deck, )
+    public void hit(Deck deck, Deck discard) {
+        // player decided to hit
+        // need to check if deck has cards in it
+        if(deck.isEmpty()){
+            deck.reloadDeck(discard);
+        }
+        hand.drawCard(deck);
+        System.out.println(name + " drew a card");
+        printHand();
+    }
 }

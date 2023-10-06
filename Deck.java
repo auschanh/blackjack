@@ -32,6 +32,29 @@ public class Deck {
         return deck.size();
     }
 
+    public boolean isEmpty() {
+        return deck.size() == 0;
+    }
+
+    public void emptyDeck(){
+        deck.clear();
+    }
+
+    public void addCards(ArrayList<Card> cards) {
+        deck.addAll(cards);
+    }
+
+    public ArrayList<Card> getCards(){
+        return deck;
+    }
+
+    public void reloadDeck(Deck discard){
+        this.addCards(discard.getCards());
+        this.shuffle();
+        discard.emptyDeck();
+        System.out.println("Deck is empty, reloading with discarded pile");
+    }
+
     public void shuffle() {
         ArrayList<Card> shuffled = new  ArrayList<Card>();
         while(deck.size()>0) {
@@ -42,7 +65,6 @@ public class Deck {
 
         }
         deck = shuffled;
-        
     }
 
     public Card getCard(){
